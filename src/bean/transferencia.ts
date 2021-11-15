@@ -10,6 +10,7 @@
 export interface Transferencia {
     nombre:       string;
     rut:          string;
+    correo:       string;
     bancoDestino: BancoDestino;
     tipoCuenta:   BancoDestino;
     numCuenta:    number;
@@ -169,6 +170,7 @@ const typeMap: any = {
     "Transferencia": o([
         { json: "nombre", js: "nombre", typ: "Néstor Valdés" },
         { json: "rut", js: "rut", typ: "18676228-2" },
+        { json: "correo", js: "correo", typ: "nvaldes.cortes@gmail.com" },
         { json: "bancoDestino", js: "bancoDestino", typ: r("BancoDestino") },
         { json: "tipoCuenta", js: "tipoCuenta", typ: r("TipoCuenta") },
         { json: "numCuenta", js: "numCuenta", typ: 123456789 },

@@ -35,7 +35,7 @@ export class Convert {
 }
 
 function invalidValue(typ: any, val: any, key: any = ''): never {
-    if (key) {
+    if(key) {
         throw Error(`problema con la clave "${key}". Ejemplo de dato correcto ${JSON.stringify(typ)}, se recibio ${JSON.stringify(val)}`);
     }
     throw Error(`Invalid value ${JSON.stringify(val)} for type ${JSON.stringify(typ)}`, );

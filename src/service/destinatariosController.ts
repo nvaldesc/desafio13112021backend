@@ -28,6 +28,9 @@ routesDestinatarios.post('/:collection/saveDestinatario',async(req:express.Reque
     const collectionParam = req?.params?.collection;
     try {
         //JSON.stringify(userData)
+        if(req.body.telefono==null){
+            req.body.telefono = 0;
+        }  
         Convert.toDestinatario(JSON.stringify(req.body));
 
         const collection = getCollection(collectionParam);
